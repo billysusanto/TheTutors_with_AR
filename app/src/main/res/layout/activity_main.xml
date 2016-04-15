@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".view.MainActivity"
+    android:background="#ffa2a2a2"
+    android:id="@+id/main_layout">
+
+    <TextView
+        android:id="@+id/tutorialTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Tutorial Title"
+        android:layout_alignParentRight="true" />
+
+    <ImageButton
+        android:layout_width="41dp"
+        android:layout_height="38dp"
+        android:id="@+id/prev"
+        android:theme="@android:style/Widget.Holo.Light.Button"
+        android:layout_alignTop="@+id/next"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@android:drawable/ic_media_previous"
+        android:layout_alignBottom="@+id/linearLayout" />
+
+    <ImageButton
+        android:layout_width="41dp"
+        android:layout_height="38dp"
+        android:id="@+id/next"
+        android:layout_alignRight="@+id/description"
+        android:layout_alignEnd="@+id/description"
+        android:src="@android:drawable/ic_media_next"
+        android:layout_above="@+id/description" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take a Test"
+        android:id="@+id/description"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/tutorialTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/tutorialTitle"
+        android:clickable="false"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/next"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+
+        <ImageButton
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:id="@+id/rewindButton"
+            android:layout_alignBottom="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/prev"
+            android:src="@android:drawable/ic_media_rew"/>
+
+        <ImageButton
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:id="@+id/playButton"
+            android:src="@android:drawable/ic_media_play"
+            android:layout_alignBottom="@+id/playPause"
+            android:layout_toRightOf="@+id/prev" />
+
+        <ImageButton
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:id="@+id/pauseButton"
+            android:src="@android:drawable/ic_media_pause"
+            android:layout_below="@+id/tutorialScroll"
+            android:layout_toLeftOf="@+id/next" />
+
+        <ImageButton
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:id="@+id/forwardButton"
+            android:src="@android:drawable/ic_media_ff"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/next"
+        android:id="@+id/frameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/seekBar">
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webView"
+            android:nestedScrollingEnabled="true"
+            android:layout_gravity="left|bottom"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/frameLayout" />
+    </FrameLayout>
+
+</RelativeLayout>

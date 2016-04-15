@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".view.MainActivity">
+    <item
+        android:id="@+id/mainMenu"
+        android:title="Tutorial"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/aboutMenu"
+        android:title="About"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/creditMenu"
+        android:title="Credits"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/logoutMenu"
+        android:title="Logout"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

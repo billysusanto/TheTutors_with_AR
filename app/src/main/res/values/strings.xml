@@ -1,0 +1,1039 @@
+<resources>
+
+    <string name="facebook_app_id">547698178722742</string>
+
+    <!-- Activity Title - Start -->
+    <string name="app_name">MathsTutor</string>
+    <string name="test_description_title">Description Title</string>
+    <string name="test_screen_title">Test Title</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash_screen">The Tutors</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">The Tutors</string>
+    <string name="title_activity_test_screen">Test</string>
+    <string name="title_activity_test_description">Test Description</string>
+    <string name="title_activity_result">Result</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_credits">Credits</string>
+    <string name="title_activity_tutorial_description">Tutorial Description</string>
+    <string name="title_activity_welcome_message">Welcome Message</string>
+    <string name="title_activity_animation">Animation</string>
+    <string name="title_activity_input_name">Input Name</string>
+    <!-- Activity Title - End -->
+
+    <!-- Question - Start -->
+    <string-array name="question">
+        <item>(3 - 1) x (9 - 7)</item>
+        <item>(3 - 2) + (9 - 7)</item>
+        <item>(3 - 1) - (9 - 7)</item>
+        <item>(3 - 1) : (9 - 7)</item>
+        <item>(4 - 1) x (9 - 7)</item>
+
+        <item>(5 - 1) x (9 - 7)</item>
+        <item>(6 - 1) x (9 - 7)</item>
+        <item>(7 - 1) x (9 - 7)</item>
+        <item>(1 - 1) x (9 - 7)</item>
+        <item>(2 - 1) x (8 - 7)</item>
+
+        <item>(4 - 1) x (7 - 7)</item>
+        <item>(5 - 1) x (9 - 6)</item>
+        <item>(6 - 1) x (9 - 5)</item>
+        <item>(7 - 1) x (9 - 2)</item>
+        <item>(8 - 1) x (9 - 3)</item>
+    </string-array>
+    <!-- Question - End -->
+
+    <!-- Answer - Start -->
+    <string-array name="answer">
+        <item>4</item>
+        <item>3</item>
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>0</item>
+        <item>1</item>
+
+        <item>0</item>
+        <item>12</item>
+        <item>20</item>
+        <item>42</item>
+        <item>56</item>
+    </string-array>
+    <!-- Answer - End -->
+
+    <!-- MultipleChoice - Start -->
+    <string-array name="multi_choice">
+        <item>4#5#6</item>
+        <item>1#2#3</item>
+        <item>0#1#2</item>
+        <item>1#2#3</item>
+        <item>5#6#7</item>
+
+        <item>8#9#10</item>
+        <item>9#10#11</item>
+        <item>11#12#13</item>
+        <item>0#1#2</item>
+        <item>1#2#3</item>
+
+        <item>0#1#3</item>
+        <item>12#13#14</item>
+        <item>20#30#40</item>
+        <item>41#42#43</item>
+        <item>55#56#57</item>
+    </string-array>
+    <!-- MultipleChoice - End -->
+
+    <!-- TutorialTitle - Start -->
+    <string-array name="tutorial_title">
+        <item>FORMULAE : SUBSTITUTION AND CHANGE OF FORMULA</item>
+        <item>SUBTITUTION-1</item>
+        <item>SUBTITUTION-2</item>
+        <item>SUBTITUTION-3</item>
+        <item>CHANGE OF SUBJECT</item>
+    </string-array>
+    <!-- TutorialTitle - End -->
+
+    <!-- TutorialTitle - Start -->
+    <string-array name="tutorial_content_1" formatted="false">
+        <item>
+            <Data><![CDATA[
+            <html>
+                <body style="font-family:'Times New Roman'">
+                    <i>OBJECTIVE</i>
+                    <ol>
+                        <li><i><p align="justify">Students should be able to substitute values in a formula.</p></i></li>
+                        <li><i><p align="justify">Students should be able to change the subject of a formula at the end of the lesson.</p></i></li>
+                    </ol>
+                    <br></br>
+                    <b>FORMULAR</b>
+                    </br>
+                        <p align="justify">
+                            &nbsp&nbsp&nbsp&nbspA formula can be described as a standard procedure for solving problems. It can also be defined as a group of symbols that make a mathematical statement which could be made up of letters that stands for certain quantities e.g.
+                        </p>
+                    <ol type="1">
+                        <li><p align="justify">The formula that defines the circumference of a circle is given by C=2&pi;r, where C is the circumference of a Circle with Radius, r.</p></li>
+                        <li><p align="justify">In science, to calculate the current I in an Electric Circuit, I=V/R, where V is the voltage measured in volts and R is the resistance, also measured in ohms. This is the formula that shows the relationship between the current I, measured in amps, the voltage and the resistance of an Electric Circuit.</p></li>
+                        <li><p align="justify">The formula that shows the interest, I, gained on a principal P invested at R% per annum for T number of years is given as I=PRT/100</p></li>
+                    </ol>
+                    </br>
+                    <p align="justify">
+                        &nbsp&nbsp&nbsp&nbspSometimes, the same letter (i.e. a particular letter) can stand for different quantities in different formulae. E.g. &#8217;&#8217;I&#8217;&#8217; stands for Current in the science formula and it can also stand for Interest in the arithmetic formula. &#8217;Formulae&#8217; is the plural of formula.
+                    </p>
+                </body>
+            </html>
+            ]]> </Data>
+        </item>
+        <item>
+            <Data><![CDATA[
+                <html>
+                <body  style="font-family:'Times New Roman'">
+                <p align="justify">
+                    &nbsp&nbsp&nbspSubstitution in the literal context can mean interchanging something for another or someone for another as the case may be. Substitution is the process of
+                    replacing a given variable in an expression with its actual value. In formulae, we can substitute a value with a variable i.e. substitution in a formula
+                    can as well mean replacing values with letters.
+                </p>
+                <p align="justify">
+                    &nbsp&nbsp&nbsp&nbspBy this, it is possible to calculate other variables or letters or symbols that their values are not given or stated in an expression or formula.
+                </p>
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:426pt;vertical-align:top;">
+
+                                <p>
+                                    <strong> Example 1 Question: </strong>
+                                </p>
+                                <p>
+                                    <i>A gas at a temperature of 0 <i>
+                                    <i><span style="color:#1F497D;"> &deg;C </span><i>
+                                    <i> has an Absolute Temperature of T kelvin. Where T=&sigma;+273.<i>
+                                </p>
+
+                                    <ol type="a">
+                                        <li>Find the absolute temperature of a gas at temperature of 68 <i><font color="rgb(1f, 49, 7d)"> &deg;C</font><i></li>
+                                        <li>Find the absolute temperature of a gas at temperature of 20 <span style="color:#1F497D;"> &deg;C </span></li>
+                                        <li>If the absolute temperature of a gas is at 380 kelvin, find its temperature in <span style="color:#1F497D;"> &deg;C </span></li>
+                                        <li>If the absolute temperature of a gas is at 330 kelvin, find its temperature in <span style="color:#1F497D;"> &deg;C </span></li>
+                                    </ol>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                </br>
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+
+                            <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:426pt;vertical-align:top;">
+
+                                <p>
+                                    <strong> Example 1. Solution:</strong>
+                                </p>
+                                <ol type="a">
+                                    <li>
+                                        <span style="color:#1F497D;">Find temperature of a gas at temperature of 68  &deg;C </span>
+                                        <span style="color:#E36C0A;">
+                                        <p>&nbsp&nbsp&nbsp&nbspGiven from the question that Absolute Temperature, denoted</p>
+                                        <p>&nbsp&nbsp&nbsp&nbspas T, and measured in kelvin, k, equals to &sigma; + 273. i.e.</p>
+                                        </span>
+
+                                        <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                <td></td>
+                                                    <td align="center" style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:426pt;vertical-align:top;">
+
+                                                        <p align="center">
+                                                            <strong>T = &sigma; + 273</strong>
+                                                        </p>
+                                                    </td>
+                                                <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <p align="justify">
+                                            <span style="color:#E36C0A;">The first problem is to solve for the Absolute Temperature when the Temperature is at 68 &deg;C. Therefore, </span>
+                                        </p>
+
+                                        <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:426pt;vertical-align:top;">
+
+                                                        <p align="center">
+                                                            <strong>T = 68 + 273</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>T = 341</strong>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <p align="center">
+                                            <strong><i><span style="color:#1F497D;">The Absolute Temperature is 341 kelvin.</span><i></strong>
+                                        </p>
+                                    </li>
+                                    </br>
+                                    <li>
+                                        <span style="color:#1F497D;">Find the Absolute Temperature of a gas at a Temperature of 20 &deg;C </span>.
+
+                                        <span style="color:#E36C0A;">
+                                        <p align="justify"> &nbsp&nbsp&nbsp&nbspThis second problem is not so different from the first we solved earlier. In this case, the Absolute Temperature is not also given but the
+                                        Temperature is given as 20 <span style="color:#1F497D;"> &deg;C </span> Therefore,
+                                        </p>
+                                        </span>
+
+                                        <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:426pt;vertical-align:top;">
+
+                                                        <p>
+                                                            <strong> T = &sigma; + 273 </strong>
+                                                        </p>
+                                                        <p>
+                                                            <strong> T = 20 + 273</strong>
+                                                        </p>
+                                                        <p>
+                                                            <strong> T = 293</strong>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <p align="center">
+                                            <strong><i><span style="color:#1F497D;">The Absolute Temperature is 293 kelvin. <span style="color:#1F497D;"><i></strong>
+                                        </p>
+                                    </li>
+                                    </br>
+                                    <li>
+                                        <i><span style="color:#1F497D;">If the Absolute Temperature of a gas is 380 kelvin, find its Temperature in Degree Celsius &deg;C). <span style="color:#1F497D;"><i>
+
+                                        <span style="color:#E36C0A;">
+                                        <p align="justify">&nbsp&nbsp&nbsp&nbspRemember that the Absolute Temperature is T, measured in Kelvin, and the Temperature is &sigma;, measured in Degree Celsius. This shows us now
+                                        that the variable whose value we are solving for is &#148;&sigma;&#148;. And given that:
+                                        </p>
+                                        </span>
+
+                                        <table border="1" cellspacing="0" cellpadding="0"  width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:426pt;vertical-align:top;">
+
+                                                        <p align="center">
+                                                            <strong>T = &sigma; + 273</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>When, T = 380,</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong> </strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>We have,</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>380 = &sigma; + 273</strong>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <span style="color:#E36C0A;">
+                                        <p align="justify">
+                                        Here, we have two options we could apply to solve this problem. The first is to subtract 273 from both sides and the second is to change
+                                        the subject of the equation. But in this lesson, we would apply the first method, i.e. we subtract 273 from both sides. And we have:
+                                        </p>
+                                        </span>
+
+                                        <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:426pt;vertical-align:top;">
+
+                                                        <p align="center">
+                                                            <strong>380 - 273 = &sigma; + 273 - 273</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>107 = &sigma; + 0</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>107 = &sigma;</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>&sigma; = 107</strong>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <p align="center">
+                                            <strong><i><span style="color:#1F497D;">The Temperature of the gas is 107 &deg;C </span></i></strong>
+                                        </p>
+                                    </li>
+                                    </br>
+                                    <li>
+                                        <i><span style="color:#1F497D;">If the Absolute Temperature of a gas is 330 kelvin, find the Temperature in  &deg;C </span>.<i>
+
+                                        <table border="1" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:426pt;vertical-align:top;">
+                                                        <p align="center">
+                                                            <strong><span style="color:#E36C0A;">Absolute Temperature, T = 330 kelvin,</span></strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong><span style="color:#E36C0A;">Temperature, &sigma; = ? &deg;C </span>.</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong><span style="color:#E36C0A;">Therefore,</span></strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>330 = &sigma; + 273</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>Subtract 273 from both sides</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>330 - 273 = &sigma; + 273 - 273</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>157 = &sigma; + 0</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>157 = &sigma;</strong>
+                                                        </p>
+                                                        <p align="center">
+                                                            <strong>&sigma; = 157</strong>
+                                                        </p>
+                                                        <p>
+                                                            <strong></strong>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <p align="center">
+                                            <strong><i>The Temperature of gas is 157
+                                            <span style="color:#1F497D;"> &deg;C </span>.
+                                              <i></strong>
+                                        </p>
+                                    </li>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </body>
+            </html>
+            ]]> </Data>
+        </item>
+        <item>
+            <Data><![CDATA[
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <title></title>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta name="author" content="Jtone" /><meta name="lastsavedby" content="Jtone" />
+            <meta name="datecontentcreated" content="2015-07-25T10:11:00Z" />
+            <meta name="datelastsaved" content="2015-07-25T10:13:00Z" />
+            </head>
+
+            <body style="font-family:'Times New Roman'">
+            <div>
+            <p align="justify">
+                &nbsp&nbsp&nbspAnother example to further fortify our knowledge on the topic will be based on Electricity.  In this example, we will be mentioning the likes of Power, represented by W and measured in watts, Current, represented by I, and measured in volts, also, Voltage, represented by V and measured in volts.
+            </p>
+
+            <table style="border-collapse:collapse;">
+                <tr>
+                    <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:426pt;vertical-align:top;">
+
+                        <p align="justify">
+                            <span style="font-size:12pt;font-weight: bold;"> Example 2 Question:</span>
+                        </p>
+                        <p align="justify">
+                            <span style="color:#1F497D;"><i><b>
+                            The formula W = IV gives the Power,  W watts,
+                            used by an electrical item when a current of I amps flows through
+                            a circuit of V volts.</b></i></span>
+                        </p>
+                        <ol type="a">
+                            <li><p align="justify">An air conditioner on a maximum power needs a current of 25 amps in a 120 volts circuit. Find the power being used.</p></li>
+                            <li><p align="justify">An electric light bulb is marked 100 watts, 240 volts. Find the current required to light the bulb.</p></li>
+                        </ul>
+
+
+                        </td>
+                    </tr>
+            </table>
+                </br>
+                <table style="border-collapse:collapse;">
+                    <tr>
+                        <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:427pt;vertical-align:top;">
+                        <p align="justify">
+                            <span><b>Example 2 solution:</b></span>
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <span style="color:#1F497D;">
+                                    <i><b><p align="justify">
+                                        An air conditioner on a maximum power needs a current of 25 amps in a 120 volts circuit. Find the power being used.
+                                    </p></b></i>
+                                </span>
+                                <p align="justify">
+                                   Given that W = VI, this means the power in a given circuit equals the multiplication of the Voltage and the Current.
+                                   According to the first question, we have the following:
+                                </p>
+                                <table style="border-collapse:collapse;">
+                                    <tr>
+                                        <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:218.8pt;vertical-align:top;">
+                                            <p style="text-align:center;margin-left:4.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">I = 25, V = 120, but W is not given.</span>
+                                            </p>
+                                            </br>
+                                            <p style="text-align:center;margin-left:4.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">And W = V * I</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:4.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">Therefore, W = 120 * 25</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:4.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">W = 3000</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p align="center"><b>
+                                    The power of the circuit is 3000watts.
+                                </b><p>
+                            </li>
+                            <li>
+                                <span style="color:#1F497D;">
+                                    <i><b><p align="justify">
+                                        An electric light bulb is marked 100 watts, 240 volts. Find the current required to light the bulb.
+                                    </p></b></i>
+                                </span>
+                                <table style="border-collapse:collapse;">
+                                    <tr>
+                                        <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:218.8pt;vertical-align:top;">
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                                <span style="font-size:12pt;">Given from the question that:</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                                <span style="font-size:12pt;color:#E36C0A;">W = 100,</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                                <span style="font-size:12pt;color:#E36C0A;">V = 240</span>
+                                                </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;">but &#148;I&#148; is not given,</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span>&#xa0;</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">W = V * I</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">100 = 240 * I</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;">Divide both sides by 240</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">We have:</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">100&divide;240 = I &divide; 240</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;">When we solve the following, we have</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">I = 100 &divide; 240</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">I = 10 &divide; 24</span>
+                                            </p>
+                                            <p style="text-align:center;margin-left:5.4pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="font-size:12pt;color:#E36C0A;">I =   5/12</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ol>
+
+                        <p align="center">
+                            <b>The Current in the circuit is 5/12 Volts.</b>
+                        </p>
+                </table>
+
+                    </div>
+                </body>
+            </html>
+            ]]> </Data>
+        </item>
+        <item>
+            <Data><![CDATA[
+               <!DOCTYPE html>
+            <html>
+                <head>
+                <title>
+                </title>
+                <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                <meta name="author" content="Jtone" />
+                <meta name="lastsavedby" content="Billy Susanto" />
+                <meta name="datecontentcreated" content="2015-07-25T12:15:00Z" />
+                <meta name="datelastsaved" content="2015-07-25T15:31:00Z" />
+                </head>
+
+                <body style="font-family:'Times New Roman'">
+                    <div>
+                        <p style="margin-left:0pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:10pt;padding: 1pt 4pt;">
+                            <span style="font-size:12pt;">Let&#39;s work with more examples to buttress the topic.</span>
+                        </p>
+                        <table style="border-collapse:collapse;">
+                            <tr>
+                                <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:395.25pt;vertical-align:top;">
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;">Example 3 Question:</span>
+                                    </p>
+                                    <p align="center">
+                                        <i><b><span style="color:#1F497D;">If y = 3 - x. find the values of y when</span></b></i>
+                                    </p>
+                                    <p align="center">
+                                        <span style="color:#1F497D;"><i><b>x = 1,2,3,4,5.</b></i></span>
+                                    </p>
+                                    </br>
+                                </td>
+                            </tr>
+                        </table>
+
+                        </br>
+
+                        <table style="border-collapse:collapse;">
+                            <tr>
+                                <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:395.25pt;vertical-align:top;">
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;">Example 3 solution.</span>
+                                    </p>
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;">When x = 1,</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y = 3 - 1</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y = 2.</span>
+                                        </p>
+                                    </br>
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;">When x = 2,</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y  = 3 - 2</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y = 1.</span>
+                                    </p>
+                                    </br>
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;">When x = 3,</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y = 3 - 3</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y = 0</span>
+                                    </p>
+                                    </br>
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;">When x = 4,</span></p><p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y =  3 - 4</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y = -1.</span>
+                                    </p>
+                                    </br>
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;">When x = 5,</span></p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y = 3 - 5</span></p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-size:12pt;color:#E36C0A;">y = -2.</span>
+                                    </p>
+                                    </br>
+                                </td>
+                            </tr>
+                        </table>
+
+                        </br>
+                        </br>
+
+
+                        <table style="border-collapse:collapse;">
+                            <tr>
+                                <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:396.4pt;vertical-align:top;">
+                                    <p align="justify">
+                                        <span style="font-size:12pt;">Example 4 Question:</span>
+                                    </p>
+                                    <p align="center">
+                                        <span style="color:#1F497D;"><i><b>If y = 2x - 5. Find the values of y</b></i></span>
+                                    </p>
+                                    <p align="center">
+                                        <span style="color:#1F497D;"><i><b>when x = 1,2,3,4,5.</b></i></span>
+                                    </p>
+                                    </br>
+                                </td>
+                            </tr>
+                        </table>
+
+                        </br>
+
+                        <table style="border-collapse:collapse;">
+                            <tr>
+                                <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:395.6pt;vertical-align:top;">
+                                    <p align="justify">
+                                    <span style="font-size:12pt;">Example 4 solution. </span>
+
+                                    <span style="font-family:Calibri;font-size:11pt;">When x = 1,</span></p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 2x - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 2(1) - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 2 - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = -3</span>
+                                    </p>
+                                    </br>
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;">When x = 2</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 2(2) - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 4 - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = -1</span>
+                                    </p>
+                                    </br>
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;">When x = 3,</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 2(3) - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 6 - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 1</span>
+                                    </p>
+                                    </br>
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;">When x = 4,</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 2(4) - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 8 - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 3</span>
+                                    </p>
+                                    </br>
+                                    <p style="margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;">When x = 5,</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 2(5) - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 10 - 5</span>
+                                    </p>
+                                    <p style="text-align:center;margin-left:0pt;margin-right:0pt;margin-top:0pt;margin-bottom:0pt;">
+                                        <span style="font-family:Calibri;font-size:11pt;color:#E36C0A;">Y = 5.</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br />
+                        <p align="justify">
+                            <span>Substituting values for variables or variables for values can be done in numerous ways and patterns. Let us see more examples with a little more challenging task of substituting values and variables. </span></p>
+                        </p>
+
+                        <table style="border-collapse:collapse;">
+                            <tr>
+                                <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:378pt;vertical-align:top;"><p align="justify">
+                                        <span style="font-size:12pt;">Example 5 Question:</span>
+                                    </p>
+                                    <p align="center">
+                                        <span style="color:#1F497D;">The weekly cost, C naira of running a household n people is given by the formula</span></p>
+                                    </br>
+                                    <p align="center">
+                                        <span style="color:#1F497D;">C = 180n + 450.</span></p>
+
+                                    <ol type="a">
+                                        <li><span style="color:#1F497D;">Find the weekly cost for five people.<span color:#1F497D;"></li>
+                                        </br>
+                                        <li><span style="color:#1F497D;">How many people are there if the weekly cost is 1,170naira ?<span color:#1F497D;"></li>
+                                    </ol>
+
+                                </td>
+                            </tr>
+                        </table>
+
+                        </br>
+
+                        <table style="border-collapse:collapse;">
+                            <tr>
+                                <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:378pt;vertical-align:top;">
+                                    <p align="justify">
+                                        <span style="font-size:12pt;">Example 5 solution.</span>
+                                    </p>
+
+                                    <ol type="a">
+                                        <li>
+                                            <span style="font-size:12pt;color:#1F497D;">Find the weekly cost for five people.</span>
+                                            <p style="margin-left:36pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                                <span>&#xa0;</span>
+                                            </p>
+                                            <p align="justify">
+                                                <span style="font-size:12pt;color:#1F497D;">Given that there are 5 people, which implies n = 5.</span>
+                                            </p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;color:#1F497D;">C = 180(n) + 450</span>
+                                            </p>
+                                            <p style="text-align:center;">
+                                                <span style="font-size:12pt;color:#1F497D;">C = 180(5) + 450</span>
+                                            </p>
+                                            <p style="text-align:center;">
+                                                <span style="font-size:12pt;color:#1F497D;">C = 900 + 450</span>
+                                            </p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;color:#1F497D;">C = 1,350.</span>
+                                            </p>
+                                            <p  align="justify">
+                                                <span style="font-size:12pt;color:#1F497D;"> The weekly cost for five people is 1350naira.</span>
+                                            </p>
+                                            <p style="margin-left:36pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                                <span>&#xa0;</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <span style="font-size:12pt;color:#1F497D;">
+                                            <p  align="justify">How many people are there if the weekly cost is 1,170naira?</p>
+                                            </br>
+                                            <p align="justify">Given that the weekly cost is 1,170naira, means that</p>
+                                            </span>
+
+                                            <p align="justify">
+                                                <span style="font-size:12pt;color:#E36C0A;"> C = 1,170 naira,</span><span style="font-size:12pt;"> therefore,</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;color:#E36C0A;">1,170 = 180(n) + 450</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;color:#E36C0A;">1,170 = 180n + 450</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;">Subtract 450 from both sides</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;color:#E36C0A;">1,170 - 450 = 180n - 450</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;color:#E36C0A;">720 = 180n - 450</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;">Divide both sides by 180</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;color:#E36C0A;">720/180 = 180n/180</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;color:#E36C0A;">4 = n</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;color:#E36C0A;">n = 4.</span></p>
+                                            <p align="center">
+                                                <span style="font-size:12pt;">The number of people is 4.</span></p>
+                                        </li>
+                                    </ol>
+
+                                </td>
+                            </tr>
+                        </table>
+                        </br>
+                    </div>
+                </body>
+            </html>
+
+            ]]> </Data>
+        </item>
+        <item>
+            <Data><![CDATA[
+            <!DOCTYPE html>
+                <html>
+                <head>
+                    <title></title>
+                    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                    <meta name="author" content="Jtone" />
+                    <meta name="lastsavedby" content="Jtone" />
+                    <meta name="datecontentcreated" content="2015-07-25T13:38:00Z" />
+                    <meta name="datelastsaved" content="2015-07-29T04:34:00Z" />
+                    </head>
+
+                    <body style="font-family:'Times New Roman'">
+                        <div>
+                            <p align="justify">
+                                <span>The letter I, is the subject of the formula   I=PRT/100. The subject stands on its own. Its value can be found by directly substituting the values of other letters in the formula. It is often necessary to change the subject of a formula so as to calculate the values of other variables in the formula. Change of subject can also mean to re-arrange the order of the letters in the formula so that one of the letters becomes the subject.</span>
+                            </p>
+
+                            <table style="border-collapse:collapse;">
+                                <tr>
+                                    <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:252pt;vertical-align:top;">
+                                        <p style="margin-left:0pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;"><span>Example 8 Question:</span></p><p align="center">
+                                            <span style="color:#1F497D;"><b>Make P, R and T in turn the subject of the formula</b></span>
+                                        </p>
+                                        <p align="center">
+                                            <span style="color:#1F497D;"><b>I=PRT/100</b></span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p align="center" />
+                            <table style="border-collapse:collapse;">
+                                <tr>
+                                    <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:252pt;vertical-align:top;">
+                                        <p style="margin-left:0pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span>Example 8 solution.</span>
+                                        </p>
+                                        <p align="center">
+                                            <span style="color:#E36C0A;">I = PRT/100</span>
+                                        </p>
+                                        <p align="center">
+                                            <span>Multiply both sides by 100</span>
+                                        </p>
+                                        <p align="center">
+                                            <span style="color:#E36C0A;">100I = PRT.........  (1)</span>
+                                        </p>
+                                        <p align="center">
+                                            <span>Dividing both sides of equation (1) by RT gives</span>
+                                        </p>
+                                        <p align="center">
+                                            <span style="color:#E36C0A;">P = 100I/PT.........  (2)</span>
+                                        </p>
+                                        <p align="center">
+                                            <span>Dividing both sides of equation (2) by PT gives</span>
+                                        </p>
+                                        <p align="center">
+                                            <span style="color:#E36C0A;">R = 100I/PT.........  (3)</span>
+                                        </p>
+                                        <p align="center">
+                                            <span>Dividing both sides of equation (1) by PR gives</span>
+                                        </p>
+                                        <p align="center">
+                                            <span style="color:#E36C0A;">T = 100I/PR.........  (4)</span>
+                                    </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p align="center">
+                                <span>Equations (2), (3) and (4) show P, R and T respectively as subject of the given formula.</span>
+                            </p>
+                            <p align="center">
+                                <span>&#xa0;</span>
+                            </p>
+                            <p align="center">
+                                <br style="clear:both;page-break-before:allways;" />
+                            </p>
+                            <table style="border-collapse:collapse;">
+                                <tr>
+                                    <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:236.35pt;vertical-align:top;">
+                                        <p style="margin-left:1.65pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span>Example 9:</span>
+                                        </p>
+                                        <p style="text-align:center;margin-left:1.65pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span style="color:#1F497D;">Make x the subject of the following</span>
+                                        </p>
+
+                                        <ol type="a">
+                                            <li style="color:#1F497D;"><span style="color:#1F497D;">y = x-9</span></li>
+                                            <li style="color:#1F497D;"><span style="color:#1F497D;">n = 7x</span></li>
+                                            <li style="color:#1F497D;"><span style="color:#1F497D;">x/a = 8</span></li>
+                                            <li style="color:#1F497D;"><span style="color:#1F497D;">n/x = k</span></li>
+                                            <li style="color:#1F497D;"><span style="color:#1F497D;">y = 2x + 1</span></li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p style="margin-left:18pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:10pt;padding: 1pt 4pt;">
+                            <span>&#xa0;</span>
+                            </p>
+
+                            <table style="border-collapse:collapse;"><col style="width:321px" />
+                                <tr>
+                                    <td style="border-top-color:#000000;border-top-style:solid;border-top-width:3pt;border-bottom-color:#000000;border-bottom-style:solid;border-bottom-width:3pt;border-left-color:#000000;border-left-style:solid;border-left-width:3pt;border-right-color:#000000;border-right-style:solid;border-right-width:3pt;padding-left:5.4pt;padding-right:5.4pt;width:241.3pt;vertical-align:top;">
+                                        <p style="margin-left:0pt;margin-right:0pt;line-height:115%;margin-top:0pt;margin-bottom:0pt;">
+                                            <span>Example 9 Solution.</span>
+                                        </p>
+
+                                        <ol type="a">
+                                            <li style="color:#E36C0A;">
+                                                <span style="color:#E36C0A;">y = x-9</span></br>
+                                                <span style="color:black">add 9 to both sides</span></br>
+                                                <span style="color:#E36C0A;">y + 9 = x - 9 + 9</span></br>
+                                                <span style="color:#E36C0A;">y + 9= x</span>
+                                            </li>
+                                            </br>
+                                            <li style="color:#E36C0A;">
+                                                <span style="color:#E36C0A;">n = 7x</span></br>
+                                                <span style="color:black>Divide both sides by 7</span></br>
+                                                <span style="color:#E36C0A;">n/7= x or x = n/7</span>
+                                            </li>
+                                            </br>
+                                            <li style="color:#E36C0A;">
+                                                <span style="color:#E36C0A;">x/a = 8</span></br>
+                                                <span style="color:black>multiply both sides by a</span></br>
+                                                <span style="color:#E36C0A;">x*a/a = 8*a</span></br>
+                                                <span style="color:#E36C0A;">x = 8a</span>
+                                            </li>
+                                            </br>
+                                            <li style="color:#E36C0A;">
+                                                <span style="color:#E36C0A;">h/x = k</span></br>
+                                                <span style="color:black>multiply both sides by x</span></br>
+                                                <span style="color:#E36C0A;">hx/x = kx</span></br>
+                                                <span style="color:black>divide boths sides by k</span></br>
+                                                <span style="color:#E36C0A;">h/k = x or x = h/k</span>
+                                            </li>
+                                            </br>
+                                            <li style="color:#E36C0A;">
+                                                <span style="color:#E36C0A;">y = 2x + 1</span></br>
+                                                <span style="color:black>subtract 1 from both sides</span></br>
+                                                <span style="color:#E36C0A;">y - 1 = 2x + 1 - 1</span></br>
+                                                <span style="color:#E36C0A;">y - 1 = 2x</span></br>
+                                                <span style="color:black>divide both sides by 2</span></br>
+                                                <span style="color:#E36C0A;">y - 1 /2 = 2x/2</span></br>
+                                                <span style="color:#E36C0A;">y - 1 /2 = x</span></br>
+                                                <span style="color:#E36C0A;">x = y - 1 /2</span></br>
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </table>
+                    </div>
+                </body>
+            </html>
+
+            ]]> </Data>
+        </item>
+    </string-array>
+    <!-- TutorialTitle - End -->
+
+    <!-- Marque - Start -->
+    <string name="marque">
+        Test Change
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+    Tutorial Description - Marque\n
+
+</string>
+    <string name="title_activity_ar">AR</string>
+    <!-- Marque - End -->
+
+    <!-- AR Example String Value -->
+    <string name="menu_toggle_tile_numbers">Show/hide tile numbers</string>
+    <string name="menu_start_new_game">Start new game</string>
+    <string name="title_activity_auth">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <!--  -->
+
+</resources>
