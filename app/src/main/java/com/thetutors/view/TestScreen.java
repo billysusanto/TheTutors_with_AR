@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -41,7 +42,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import static android.view.ViewGroup.MarginLayoutParams;
 
-public class TestScreen extends AppCompatActivity {
+public class TestScreen extends ActionBarActivity {
 
     LinearLayout mainLayout;
     int max = 10;
@@ -49,7 +50,7 @@ public class TestScreen extends AppCompatActivity {
     //List<String> list_question = new LinkedList<String>();
     //List<String> list_answer = new LinkedList<String>();
     //List<String> list_multi_choice = new LinkedList<String>();
-    List<Integer> sequence = new LinkedList<Integer>();
+    List<Integer> sequence = new LinkedList<>();
 
     boolean checker [];
 
@@ -84,11 +85,12 @@ public class TestScreen extends AppCompatActivity {
         RadioButton b [] = new RadioButton[max];
         RadioButton c [] = new RadioButton[max];
         Button finish = new Button(this);
-        checker = new boolean [Arrays.asList(getResources().getStringArray(R.array.question)).size()];
+
 
         try {
             msg = servlet.execute(3, 1).get();
             questionTest = xmlParser(msg);
+            checker = new boolean [questionTest.length];
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -139,7 +141,7 @@ public class TestScreen extends AppCompatActivity {
             while(true) {
                 //temp[i] = random.nextInt(Arrays.asList(getResources().getStringArray(R.array.question)).size()-1);
                 temp[i] = random.nextInt(questionTest.length-1);
-                if(checker[temp[i]] == false){
+                if(!checker[temp[i]]){
                     checker[temp[i]] = true;
                     break;
                 }
@@ -157,16 +159,15 @@ public class TestScreen extends AppCompatActivity {
             lla[i].addView(rg[i]);
 
             //set the value of question and answer
-            number[i].setText(questionTest[i].getId());
+            number[i].setText(questionTest[i].getNo()+"");
             //String split_multi_choice [] = list_multi_choice.get(temp[i]).split("#");
             question[i].setText(questionTest[i].getQuestion());
-            split_multi_choice = questionTest[i].getMultipleChoice();
+            split_multi_choice = questionTest[i].getMultipleChoice().split("#");
 
-            for(int j=0; j<split_multi_choice.length; j++) {
-                a[i].setText("a. " + split_multi_choice[0]);
-                b[i].setText("b. " + split_multi_choice[1]);
-                c[i].setText("c. " + split_multi_choice[2]);
-            }
+            a[i].setText("a. " + split_multi_choice[0]);
+            b[i].setText("b. " + split_multi_choice[1]);
+            c[i].setText("c. " + split_multi_choice[2]);
+
             sequence.add(Integer.parseInt(questionTest[i].getAnswer()));
         }
 
@@ -185,7 +186,7 @@ public class TestScreen extends AppCompatActivity {
 
                     //algorithm to check the result
                     if(idx != -1) {
-                        String user_answer_check[] = split_multi_choice;
+                        String user_answer_check[] = questionTest[i].getMultipleChoice().split("#");
                         if (Integer.parseInt(user_answer_check[idx]) == sequence.get(i)) {
                             publicVar.incResult();
                         }
@@ -256,25 +257,16 @@ public class TestScreen extends AppCompatActivity {
                 Element e = (Element) nNode;
                 questionTest[i] = new QuestionTest();
 
-                questionTest[i].setId(Integer.parseInt(nNode.getAttributes().getNamedItem("id").getNodeValue()));
+                questionTest[i].setNo(Integer.parseInt(nNode.getAttributes().getNamedItem("id").getNodeValue()));
 
                 NodeList question = e.getElementsByTagName("question");
                 NodeList multipleChoice = e.getElementsByTagName("multiple-choice");
                 NodeList answer = e.getElementsByTagName("answer");
 
-                for(int j=0; j<question.getLength(); j++){
-                    questionTest[i].setQuestion(question.item(j).getTextContent());
-                }
+                questionTest[i].setQuestion(question.item(0).getTextContent());
+                questionTest[i].setMultipleChoice(multipleChoice.item(0).getTextContent());
+                questionTest[i].setAnswer(answer.item(0).getTextContent());
 
-                String multipleChoiceTemp [] = new String [multipleChoice.getLength()];
-                for(int j=0; j<multipleChoice.getLength(); j++){
-                    multipleChoiceTemp[i] = multipleChoice.item(j).getTextContent();
-                }
-                questionTest[i].setMultipleChoice(multipleChoiceTemp);
-
-                for(int j=0; j<answer.getLength(); j++){
-                    questionTest[i].setAnswer(answer.item(j).getTextContent());
-                }
             }
         }
         catch(ParserConfigurationException e){

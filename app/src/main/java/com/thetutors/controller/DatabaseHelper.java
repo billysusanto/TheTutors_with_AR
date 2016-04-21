@@ -178,7 +178,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(KEY_ANSWER, qt.getAnswer());
 
         return db.update(TABLE_QUESTION, values, KEY_ID + " = ?",
-                new String[] {String.valueOf(qt.getId())});
+                new String[] {String.valueOf(qt.getNo())});
     }
 
     public int deleteQuestion(int id){

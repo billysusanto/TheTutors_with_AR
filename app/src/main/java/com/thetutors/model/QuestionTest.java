@@ -4,7 +4,7 @@ package com.thetutors.model;
  * Created by billysusanto on 1/23/2016.
  */
 public class QuestionTest {
-    int id;
+    int no;
     String question;
     String answer;
     String multipleChoice;
@@ -27,7 +27,7 @@ public class QuestionTest {
     }
 
     public void setAnswer(String answer){
-        this.question = question;
+        this.answer = answer;
     }
 
     public String getAnswer(){
@@ -42,5 +42,9 @@ public class QuestionTest {
         return this.multipleChoice;
     }
 
-    public int getId(){ return this.id;}
+    public int getNo(){ return this.no;}
+
+    public void setNo(int no) {
+        this.no = no;
+    }
 }
