@@ -270,13 +270,13 @@ public class TestScreen extends ActionBarActivity {
             }
         }
         catch(ParserConfigurationException e){
-            Log.e("ParseConfigExc", e.toString());
+            Log.e("ParseConfigExc - TS", e.toString());
         }
         catch(IOException e){
-            Log.e("IOException", e.toString());
+            Log.e("IOException - TS", e.toString());
         }
         catch(SAXException e){
-            Log.e("SAXException", e.toString());
+            Log.e("SAXException - TS", e.toString());
         }
 
         return questionTest;
