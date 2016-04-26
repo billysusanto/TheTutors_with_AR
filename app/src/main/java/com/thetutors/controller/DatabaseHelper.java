@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.thetutors.model.Init;
 import com.thetutors.model.Marque;
 import com.thetutors.model.QuestionTest;
 import com.thetutors.model.Tutorial;
@@ -34,6 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TABLE_TUTORCONTENT = "tutorContent";
     private static final String TABLE_MARQUE = "marqueText";
     private static final String TABLE_USER = "user";
+    private static final String TABLE_INIT = "init";
 
     // Common column names
     private static final String KEY_ID = "id";
@@ -43,14 +45,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_QUESTION = "question";
     private static final String KEY_ANSWER = "answer";
     private static final String KEY_MULTIPLECHOISE = "multiplechoice";
+
     private static final String KEY_MARQUE = "marque";
+
     private static final String KEY_TITLE = "title";
     private static final String KEY_CONTENT = "content";
+
     private static final String KEY_USERNAME = "username";
     private static final String KEY_PASSWORD = "password";
 
-    //
-
+    private static final String KEY_CONTENT_TYPE = "content_type";
+    private static final String KEY_RESOURCE = "resource";
 
     // Table Create Statements
     // Todo table create statement
@@ -79,10 +84,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String CREATE_TABLE_USER =
             "CREATE TABLE " + TABLE_USER
-            + "(" + KEY_ID + "INTEGER PRIMARY KEY, "
+            + "(" + KEY_ID + " INTEGER PRIMARY KEY, "
             + KEY_USERNAME + " TEXT UNIQUE,"
             + KEY_PASSWORD + " TEXT,"
             + KEY_CREATED_AT + " DATETIME" + ")";
+
+    private static final String CREATE_TABLE_INIT =
+            "CREATE TABLE " + TABLE_INIT
+            + "(" + KEY_ID + " INTEGER PRIMARY KEY, "
+            + KEY_CONTENT_TYPE + " TEXT, "
+            + KEY_TITLE + " TEXT, "
+            + KEY_RESOURCE + " INTEGER" + ")";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -95,6 +107,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_TUTORCONTENT);
         db.execSQL(CREATE_TABLE_MARQUE);
         db.execSQL(CREATE_TABLE_USER);
+        db.execSQL(CREATE_TABLE_INIT);
     }
 
     @Override
@@ -104,10 +117,58 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_TUTORCONTENT);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_MARQUE);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_INIT);
 
         // create new tables
         onCreate(db);
     }
+    // =====================  INIT - START ================================
+    public long createInit (Init init){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(KEY_ID, init.getPage());
+        values.put(KEY_CONTENT_TYPE, init.getContentType());
+        values.put(KEY_TITLE, init.getTitle());
+        values.put(KEY_RESOURCE, init.getResource());
+
+        Log.e("CREATE INIT", CREATE_TABLE_INIT);
+
+        long init_id = db.insert(TABLE_INIT, null, values);
+
+        return init_id;
+    }
+
+    public List<Init> getInit(){
+        List <Init> initList = new ArrayList<Init>();
+        String selectQuery = "SELECT * FROM " + TABLE_INIT;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        if(c.moveToFirst()){
+            do{
+                Init init = new Init();
+                init.setPage(c.getInt(c.getColumnIndex(KEY_ID)));
+                init.setContentType(c.getString(c.getColumnIndex(KEY_CONTENT_TYPE)));
+                init.setTitle(c.getString(c.getColumnIndex(KEY_TITLE)));
+                init.setResource(c.getInt(c.getColumnIndex(KEY_RESOURCE)));
+
+                initList.add(init);
+            } while (c.moveToNext());
+        }
+        return initList;
+    }
+
+    public void resetInit(){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_INIT);
+        db.execSQL(CREATE_TABLE_INIT);
+    }
+
+    // =====================  INIT - END ==================================
+
 
     // =====================  QUESTION - START  ============================
     public long createQuestion(QuestionTest qt) {
