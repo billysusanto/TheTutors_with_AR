@@ -31,6 +31,7 @@ import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.thetutors.R;
 import com.thetutors.ar.AugmentedRealityActivity;
+import com.thetutors.controller.DatabaseHelper;
 import com.thetutors.controller.VariabelConfig;
 import com.thetutors.model.Init;
 import com.thetutors.webservice.JavaServlet;
@@ -44,6 +45,9 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -62,16 +66,19 @@ public class MainActivity extends Activity {
     VariabelConfig publicVar;
     Context context = this;
     WebView web_view;
+
     String videoPath;
     String audioPath;
+    String initString;
+    boolean modeOffline = false;
 
     MediaPlayer audio_player;
     SeekBar seekBar;
     ImageButton play, pause;
     Handler durationHandler = new Handler();
 
-    //List <String> tutorialContent1 = new ArrayList <>();
-    //List <String> tutorialTitleList = new ArrayList<>();
+    List <String> tutorialContent1 = new ArrayList<>();
+    List<String> tutorialTitleList = new ArrayList<>();
 
     FrameLayout fl;
     LayoutInflater li;
@@ -82,6 +89,7 @@ public class MainActivity extends Activity {
     JavaServlet servlet = new JavaServlet();
     String msg;
     Init init [];
+    DatabaseHelper dh = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,7 +99,36 @@ public class MainActivity extends Activity {
 
         publicVar = VariabelConfig.getInstance();
 
-        xmlParser(getInitXML());
+
+        initString = getInitXML();
+
+        if(!initString.equalsIgnoreCase("error")){
+            xmlParser(getInitXML());
+
+            dh.resetInit();
+            for(int i=0; i<init.length; i++){
+                dh.createInit(init[i]);
+            }
+        }
+        else{
+            List <Init> listInit  = new ArrayList<>();
+            listInit = dh.getInit();
+
+            init = new Init[listInit.size()];
+
+            for(int i=0; i<listInit.size(); i++){
+                init[i] = new Init();
+                init[i].setPage(listInit.get(i).getPage());
+                init[i].setContentType(listInit.get(i).getContentType());
+                init[i].setTitle(listInit.get(i).getTitle());
+                init[i].setResource(listInit.get(i).getResource());
+            }
+
+            //xmlParser(getResources().getString(R.string.init));
+            tutorialContent1 = Arrays.asList(getResources().getStringArray(R.array.tutorial_content_1));
+            tutorialTitleList = Arrays.asList(getResources().getStringArray(R.array.tutorial_title));
+            modeOffline = true;
+        }
         //Initialization view - start
 
         fl = (FrameLayout) findViewById(R.id.frameLayout);
@@ -113,8 +150,14 @@ public class MainActivity extends Activity {
         //content text view
         tutorialTitle = (TextView) findViewById(R.id.tutorialTitle);
         //tutorialTitle.setText(tutorialTitleList.get(publicVar.getCount()).toString());
-        tutorialTitle.setText(init[publicVar.getCount()].getTitle());
-
+        if(modeOffline == false) {
+            tutorialTitle.setText(init[publicVar.getCount()].getTitle());
+            publicVar.setTutorLength(init.length);
+        }
+        else{
+            tutorialTitle.setText(tutorialTitleList.get(publicVar.getCount()).toString());
+            publicVar.setTutorLength(tutorialContent1.size());
+        }
         //media player & seekbar
         audio_player = MediaPlayer.create(this, publicVar.getResId()); // get harus ganti ke <resource>
         finalTime = audio_player.getDuration();
@@ -133,31 +176,55 @@ public class MainActivity extends Activity {
         //Initialization view - end
 
         //getInitValue();
-        publicVar.setTutorLength(init.length);
+
 
         //load the default tutorial page (page 1)
         //web_view.loadData(tutorialContent1.get(publicVar.getCount()).toString(), "text/html", "ISO-8859-1");
-        if(init[publicVar.getCount()].getContentType().equalsIgnoreCase("text")) {
-            msg = getTextContent(publicVar.getCount());
-            web_view.loadData(msg, "text/html", "ISO-8859-1");
+        if(modeOffline == false) {
+            if (init[publicVar.getCount()].getContentType().equalsIgnoreCase("text")) {
+
+                msg = getTextContent(publicVar.getCount());
+                web_view.loadData(msg, "text/html", "ISO-8859-1");
+            } else if (init[publicVar.getCount()].getContentType().equalsIgnoreCase("video")) {
+                switchTextToVideo();
+
+                tutorialTitle.setText(init[publicVar.getCount()].getTitle());
+
+                videoPath = "android.resource://" + getPackageName() + "/" +
+                        getResources().getIdentifier("animation_" + init[publicVar.getCount()].getResource(), "raw", getPackageName());
+
+                //videoPath = "http://192.168.0.12/appengine-helloworld/animation_0.mp4";
+
+                video_view.setVideoURI(Uri.parse(videoPath));
+
+                //reset seebar max duration depends on video length
+                seekBar.setMax(video_view.getDuration());
+            } else if (init[publicVar.getCount()].getContentType().equalsIgnoreCase("ar")) {
+                Intent i = new Intent(MainActivity.this, AugmentedRealityActivity.class);
+                startActivity(i);
+            }
         }
-        else if(init[publicVar.getCount()].getContentType().equalsIgnoreCase("video")){
-            switchTextToVideo();
-            tutorialTitle.setText(init[publicVar.getCount()].getTitle());
+        else if (modeOffline == true){
+            if (init[publicVar.getCount()].getContentType().equalsIgnoreCase("text")) {
+                msg = tutorialContent1.get(publicVar.getCount()).toString();
+                web_view.loadData(msg, "text/html", "ISO-8859-1");
+            } else if (init[publicVar.getCount()].getContentType().equalsIgnoreCase("video")) {
+                switchTextToVideo();
 
-            videoPath = "android.resource://" + getPackageName() + "/" +
-                    getResources().getIdentifier("animation_"+init[publicVar.getCount()].getResource(), "raw", getPackageName());
+                tutorialTitle.setText(tutorialTitleList.get(publicVar.getCount()).toString());
+                videoPath = "android.resource://" + getPackageName() + "/" +
+                        getResources().getIdentifier("animation_" + init[publicVar.getCount()].getResource(), "raw", getPackageName());
 
-            //videoPath = "http://192.168.0.12/appengine-helloworld/animation_0.mp4";
+                //videoPath = "http://192.168.0.12/appengine-helloworld/animation_0.mp4";
 
-            video_view.setVideoURI(Uri.parse(videoPath));
+                video_view.setVideoURI(Uri.parse(videoPath));
 
-            //reset seebar max duration depends on video length
-            seekBar.setMax(video_view.getDuration());
-        }
-        else if(init[publicVar.getCount()].getContentType().equalsIgnoreCase("ar")){
-            Intent i = new Intent(MainActivity.this, AugmentedRealityActivity.class);
-            startActivity(i);
+                //reset seebar max duration depends on video length
+                seekBar.setMax(video_view.getDuration());
+            } else if (init[publicVar.getCount()].getContentType().equalsIgnoreCase("ar")) {
+                Intent i = new Intent(MainActivity.this, AugmentedRealityActivity.class);
+                startActivity(i);
+            }
         }
 
         startDescription.setOnClickListener(new View.OnClickListener() {
@@ -206,14 +273,19 @@ public class MainActivity extends Activity {
                     mediaStop();
                     publicVar.setCount(publicVar.getCount() - 1);
                     if(init[publicVar.getCount()].getContentType().equalsIgnoreCase("text")) {
-                        //Set tutorial title
-                        //tutorialTitle.setText(tutorialTitleList.get(publicVar.getCount()).toString());
-                        tutorialTitle.setText(init[publicVar.getCount()].getTitle());
 
                         //switch content between video_view to web_view
                         switchVideoToText();
                         //Load tutorial content in HTML format
-                        web_view.loadData(getTextContent(init[publicVar.getCount()].getResource()), "text/html", "utf-8");
+                        if (modeOffline == false) {
+                            tutorialTitle.setText(init[publicVar.getCount()].getTitle());
+                            web_view.loadData(getTextContent(init[publicVar.getCount()].getResource()), "text/html", "utf-8");
+                        }
+                        else{
+                            tutorialTitle.setText(tutorialTitleList.get(publicVar.getCount()).toString());
+                            web_view.loadData(tutorialContent1.get(publicVar.getCount()).toString(), "text/html", "utf-8");
+                        }
+
                         //reset scroll to top position after load prev page
                         web_view.scrollTo(0, 0);
 
@@ -275,10 +347,17 @@ public class MainActivity extends Activity {
                         switchVideoToText();
                         //Set tutorial title
                         //tutorialTitle.setText(tutorialTitleList.get(publicVar.getCount()).toString());
-                        tutorialTitle.setText(init[publicVar.getCount()].getTitle());
 
-                        //Load tutorial content in HTML format
-                        web_view.loadData(getTextContent(init[publicVar.getCount()].getResource()), "text/html", "utf-8");
+                        if(modeOffline == false) {
+                            tutorialTitle.setText(init[publicVar.getCount()].getTitle());
+
+                            //Load tutorial content in HTML format
+                            web_view.loadData(getTextContent(init[publicVar.getCount()].getResource()), "text/html", "utf-8");
+                        }
+                        else{
+                            tutorialTitle.setText(tutorialTitleList.get(publicVar.getCount()).toString());
+                            web_view.loadData(tutorialContent1.get(publicVar.getCount()).toString(), "text/html", "utf-8");
+                        }
                         //reset scroll to top position after load next page
                         web_view.scrollTo(0, 0);
 
@@ -472,6 +551,8 @@ public class MainActivity extends Activity {
     }
 
     public void xmlParser(String xml){
+        Log.e("XML", xml);
+
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -493,22 +574,24 @@ public class MainActivity extends Activity {
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
                     init[i] = new Init(
-                            Integer.parseInt(eElement.getAttribute("page")),
+                            Integer.parseInt(eElement.getElementsByTagName("page").item(0).getTextContent()),
                             eElement.getElementsByTagName("content-type").item(0).getTextContent(),
                             eElement.getElementsByTagName("title").item(0).getTextContent(),
                             Integer.parseInt(eElement.getElementsByTagName("resource").item(0).getTextContent())
                     );
                 }
+//
+
             }
         }
         catch(ParserConfigurationException e){
-            Log.e("ParseConfigExc", e.toString());
+            Log.e("ParseConfigExc- MA", e.toString());
         }
         catch(IOException e){
-            Log.e("IOException", e.toString());
+            Log.e("IOException- MA", e.toString());
         }
         catch(SAXException e){
-            Log.e("SAXEXception", e.toString());
+            Log.e("SAXEXception- MA", e.toString());
         }
     }
 
@@ -518,10 +601,10 @@ public class MainActivity extends Activity {
             msg = servlet.execute(1, 0).get();
         }
         catch(InterruptedException e){
-            Log.e("InterruptedEx : ", e.toString());
+            Log.e("InterruptedEx - MA", e.toString());
         }
         catch(ExecutionException e){
-            Log.e("ExecutionEx : ", e.toString());
+            Log.e("ExecutionEx - MA", e.toString());
         }
 
         return msg;
@@ -535,10 +618,10 @@ public class MainActivity extends Activity {
             content = servlet.execute(2, page).get();
         }
         catch(InterruptedException e){
-            Log.e("InterruptedEx : ", e.toString());
+            Log.e("InterruptedEx - MA", e.toString());
         }
         catch(ExecutionException e){
-            Log.e("ExecutionEx : ", e.toString());
+            Log.e("ExecutionEx - MA", e.toString());
         }
 
         return content;

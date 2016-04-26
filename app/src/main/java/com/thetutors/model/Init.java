@@ -11,6 +11,8 @@ public class Init extends Application {
     String title;
     int resource;
 
+    public Init(){}
+
     public Init(int page, String contentType, String title, int resource) {
         this.page = page;
         this.contentType = contentType;
